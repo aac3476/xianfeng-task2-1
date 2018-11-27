@@ -21,7 +21,7 @@ def result():
     if(heroname == ''):
         error = 1
         return (render_template('search.html') )
-    db = pymysql.connect("188.131.175.223", "username", "password", "wzrytest", charset='utf8')
+    db = pymysql.connect("localhost", "username", "password", "wzrytest", charset='utf8')
     cursor = db.cursor()
     sql = r"select * from herolist where name like '%"+heroname+"%'"
     try:
